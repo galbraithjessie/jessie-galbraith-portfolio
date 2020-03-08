@@ -37,7 +37,9 @@ export default class NavigationContainer extends Component {
 
                 </div>
 
-                <div className="right-side">Jessie Galbraith</div>
+                <div className="nav-link-wrapper">
+                    <div className="right-side">Jessie Galbraith</div>
+                </div>
 
             </div>
         );
