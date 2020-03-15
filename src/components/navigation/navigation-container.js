@@ -16,7 +16,8 @@ const NavigationComponent = (props) => {
     };
 
     const handleSignOut = () => {
-        axios.delete("https://api.devcamp.space/logout", { withCredentials: true }).then(response => {
+        axios.delete("https://api.devcamp.space/logout", { withCredentials: true })
+            .then(response => {
             if (response.status === 200) {
                 props.history.push("/");
                 props.handleSuccessfulLogout();
@@ -24,8 +25,7 @@ const NavigationComponent = (props) => {
 
             return response.data;
         }).catch(error => {
-            console.log('error signint out', error);
-            
+            console.log('error signint out', error);   
         });
     };
     
