@@ -1,6 +1,9 @@
 .portfolio-items-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  background-color: $black;
+  font-size: 1.2em;
+  color: whitesmoke;
 
   .portfolio-item-wrapper {
     position: relative;
@@ -32,8 +35,9 @@
     }
 
     .img-text-wrapper:hover .subtitle {
-      color: $teal;
+      color: $electric-blue;
       font-weight: 400;
+      font-size: 1.2em;
     }
 
     .logo-wrapper img {

@@ -8,9 +8,10 @@
   }
 
   .right-column {
+    color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $offwhite;
+    background-color: $dark-slate-gray;
   }
 }
