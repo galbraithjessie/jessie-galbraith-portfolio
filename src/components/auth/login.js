@@ -56,12 +56,14 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="login-form-wrapper">
         <h1>LOGIN TO ACCESS YOUR DASHBOARD</h1>
 
         <div>{this.state.errorText}</div>
 
+        
         <form onSubmit={this.handleSubmit}>
+        <div className="two-column">
           <input
             type="email"
             name="email"
@@ -77,9 +79,10 @@ export default class Login extends Component {
             value={this.state.password}
             onChange={this.handleChange}
           />
+          </div>
 
           <div>
-            <button type="submit">Login</button>
+            <button className="btn" type="submit">Login</button>
           </div>
         </form>
       </div>

@@ -1,12 +1,16 @@
-.blog-form-wrapper {
+.login-form-wrapper {
     @include base-grid();
     grid-template-columns: 1fr;
     padding: 42px;
 
     @include input-element();
     input {
+        background-color: transparent;
         font-size: 1.2em;
         margin-bottom: 0px;
     }
 
+    .btn {
+        margin-top: 5px;
+    }
 }

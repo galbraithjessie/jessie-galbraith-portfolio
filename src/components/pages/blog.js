@@ -63,7 +63,8 @@ class Blog extends Component {
 
     axios
       .get(`https://jessiegalbraith.devcamp.space/portfolio/portfolio_blogs?page=${this.state.currentPage}`, {
-         withCredentials: true }).then(response => {
+         withCredentials: true })
+         .then(response => {
            this.setState({
             blogItems: this.state.blogItems.concat(response.data.portfolio_blogs),
             totalCount: response.data.meta.total_records,
@@ -92,14 +93,17 @@ class Blog extends Component {
         <BlogModal  
         handleSuccessfullNewBlogSubmission={this.handleSuccessfullNewBlogSubmission}
         handleModalClose={this.handleModalClose}
-        modalIsOpen={this.state.blogModalIsOpen}/>
+        modalIsOpen={this.state.blogModalIsOpen}
+        />
 
-
-        <div className="new-blog-link">
-          <a onClick={this.handleNewBlogClick}>
-          <FontAwesomeIcon icon="plus-circle" />
-          </a>
-        </div>
+        {this.props.loggedInStatus === "LOGGED_IN" ? (
+         <div className="new-blog-link">
+            <a onClick={this.handleNewBlogClick}>
+              <FontAwesomeIcon icon="plus-circle" />
+            </a>
+          </div>
+        ) : null }
+        
 
         <div className="content-container">
           {blogRecords}

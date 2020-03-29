@@ -18,6 +18,14 @@
   }
 }
 
+@mixin electric-blue-border {
+  border: 1px solid $electric-blue;
+}
+
+@mixin bright-blue-border {
+  border: 1px solid $bright-blue;
+}
+
 @mixin input-element {
   input {
     font-family: 'Acme', sans-serif;
@@ -37,6 +45,30 @@
       outline: none;
       border-bottom: 1px solid $bright-blue;
     }
+  }
+}
+
+@mixin portfolio-image-wrapper {
+  img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 5px;
+  }
+  .image-removal-link {
+      display: flex;
+      justify-content: center;
+
+      a {
+          font-size: 1.5em;
+          color: $red-orange;
+          cursor: pointer;
+
+          &:hover {
+              transition: 0.5s ease-in-out;
+              color: $red;
+          }
+      }
   }
 }
 

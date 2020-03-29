@@ -1,0 +1,35 @@
+.DraftEditor-root {
+    @include electric-blue-border();
+    padding: 20px;
+    border-radius: 3px; 
+    color: whitesmoke;
+    background-color: transparent;
+
+}
+
+.image-uploaders {
+    @include portfolio-image-wrapper();
+    @include base-grid();
+    grid-template-columns: 200px;
+    align-items: center;
+}
+
+.rdw-emoji-modal {
+    left: -169px;
+}
+
+.rdw-embedded-modal {
+    left: -124px;
+}
+
+.rdw-image-modal {
+    left: -213px;
+    
+    input {
+        color: black;
+    }
+
+    .rdw-image-modal-btn {
+        @include base-btn();
+    }
+}
