@@ -23,7 +23,7 @@ export default function() {
             </div>
 
             <div className="text">
-              555-555-5555
+              801-822-6314
             </div>
           </div>
 
@@ -33,7 +33,7 @@ export default function() {
             </div>
 
             <div className="text">
-              jessie@example.com
+              galbraithjessie@gmail.com
             </div>
           </div>
 
