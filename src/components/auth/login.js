@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class Login extends Component {
   constructor(props) {
@@ -63,7 +64,8 @@ export default class Login extends Component {
 
         
         <form onSubmit={this.handleSubmit}>
-        <div className="two-column">
+        <div className="form-group">
+          <FontAwesomeIcon icon="envelope" />
           <input
             type="email"
             name="email"
@@ -71,7 +73,12 @@ export default class Login extends Component {
             value={this.state.email}
             onChange={this.handleChange}
           />
+          </div>
 
+        <div className="form-group">
+          <div className="lock-icon">
+          <FontAwesomeIcon icon="lock" />
+          </div>
           <input
             type="password"
             name="password"
@@ -79,11 +86,9 @@ export default class Login extends Component {
             value={this.state.password}
             onChange={this.handleChange}
           />
-          </div>
+        </div> 
 
-          <div>
             <button className="btn" type="submit">Login</button>
-          </div>
         </form>
       </div>
     );

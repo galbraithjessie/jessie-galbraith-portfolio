@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr;
   height: calc(100vh - 84px);
 
+
   .left-column {
     background-size: cover;
   }
@@ -12,6 +13,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $dark-slate-gray;
+    background-color: transparent;
+
+    .login-form-wrapper {
+      @include base-grid();
+      @include input-element();
+      gap: 21px;
+      padding: 42px;
+  
+      .form-group {
+          display: flex;
+          margin: 14px;
+
+          .lock-icon {
+            margin-right: 5px;
+          }
+          
+          svg {
+              font-size: 1.8em;
+              color: whitesmoke;
+              margin-right: 15px;
+          }
+      }
+  
+     
+      input {
+          background-color: transparent;
+          font-size: 1.2em;
+          margin-bottom: 0px;
+      }
+  
+      .btn {
+          margin-top: 5px;
+      }
+  }
   }
 }
